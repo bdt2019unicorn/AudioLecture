@@ -13,6 +13,7 @@ namespace TestOutSpeechToText
         //https://www.youtube.com/watch?v=k07pFfrpeuQ
         //https://www.youtube.com/watch?v=EcZF73bsme0
         //https://www.youtube.com/watch?v=yYIQ_RkLgD8
+
         }
     }
 }
