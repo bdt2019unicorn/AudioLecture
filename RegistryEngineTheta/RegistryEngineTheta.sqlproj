@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>RegistryEngineTheta</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{22bd25af-5b62-4682-b576-7679f112191a}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>RegistryEngineTheta</RootNamespace>
+    <AssemblyName>RegistryEngineTheta</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Synonyms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AssetClass.sql" />
+    <Build Include="dbo\Tables\Pie.sql" />
+    <Build Include="dbo\Tables\MemberTax.sql" />
+    <Build Include="dbo\Tables\MemberType.sql" />
+    <Build Include="dbo\Tables\MemberFundBalance.sql" />
+    <Build Include="dbo\Tables\ReportAnnualIR854InvestorCertificateJoint.sql" />
+    <Build Include="dbo\Tables\ValuationPeriod.sql" />
+    <Build Include="dbo\Tables\ReportAnnualTaxCertificate.sql" />
+    <Build Include="dbo\Tables\MemberPiePIR.sql" />
+    <Build Include="dbo\Tables\MemberFundTransfer.sql" />
+    <Build Include="dbo\Tables\FundBalance.sql" />
+    <Build Include="dbo\Tables\TaxQuarterSummary.sql" />
+    <Build Include="dbo\Tables\FundTaxableIncome.sql" />
+    <Build Include="dbo\Tables\FundTransactionOffsetLevy.sql" />
+    <Build Include="dbo\Tables\ReportAnnualIR854InvestorCertificate.sql" />
+    <Build Include="dbo\Tables\IsiFileJob.sql" />
+    <Build Include="dbo\Tables\TaxQuarterPIEReturn.sql" />
+    <Build Include="dbo\Tables\IsiFileJobDetails.sql" />
+    <Build Include="dbo\Tables\IsiDataWholesale.sql" />
+    <Build Include="dbo\Tables\Fund.sql" />
+    <Build Include="dbo\Tables\FundPosition.sql" />
+    <Build Include="dbo\Tables\IsiFileJobEmail.sql" />
+    <Build Include="dbo\Tables\RegistryVersion.sql" />
+    <Build Include="dbo\Tables\Currency.sql" />
+    <Build Include="dbo\Tables\FundImportFileDetails.sql" />
+    <Build Include="dbo\Tables\MMCRetailFund.sql" />
+    <Build Include="dbo\Tables\FundRebalanceTransfers.sql" />
+    <Build Include="dbo\Tables\ISIData.sql" />
+    <Build Include="dbo\Views\vwMemberFundBalanceSummary.sql" />
+    <Build Include="dbo\Views\vwMmcTransactions.sql" />
+    <Build Include="dbo\Views\vwMmcUnitPrice.sql" />
+    <Build Include="dbo\Views\vwMmcISIData.sql" />
+    <Build Include="Security\IMSTT2_dbacc_grp_prd_registry_adm.sql" />
+    <Build Include="Security\IMSTT2_dbacc_grp_prd_registry_pub.sql" />
+    <Build Include="Security\IMSTT2_SQL - Testers.sql" />
+    <Build Include="Security\IMSTT2_SQL - All databases.sql" />
+    <Build Include="Security\IMSTT2_svc_sqlmonitoring.sql" />
+    <Build Include="Security\svc_agpdw_linkedserver_RO.sql" />
+    <Build Include="Security\IMSTT2_SQL - GMI.sql" />
+    <Build Include="Security\IMSTT2_SQL - EOM Processing.sql" />
+    <Build Include="Security\IMSTT2_SQL - Senior devs.sql" />
+    <Build Include="Security\IMSTT2_SQL - Senior devs_1.sql" />
+    <Build Include="Security\IMSTT2_SG_SQL_AGPRDCUSTWLG-1_RegistryEngine_Read.sql" />
+    <Build Include="Security\IMSTT2_veeam_backup_vss_svc.sql" />
+    <Build Include="Security\IMSTT2_veeam_backup_svc.sql" />
+    <Build Include="Security\IMSTT2_dbacc_grp_prd_ssrs.sql" />
+    <Build Include="Security\IMSTT2_SQL - Prod Support.sql" />
+    <Build Include="Security\IMSTT2_SG_SQL_agprdcustwlg-1_DB-ALL_Read.sql" />
+    <Build Include="Security\IMSTT2_SQL-Technology_Transformation_Project.sql" />
+    <Build Include="Security\IMSTT2_SG_SQL_AGPRDCUSTWLG-1_DB_SP_Read.sql" />
+    <Build Include="Security\IMSTT2_dbacc_dev_all.sql" />
+    <Build Include="Security\imstt2_david.guy.sql" />
+    <Build Include="Security\IMSTT2_SG_SQL_AGDEVTESTWLG-1_DB-All_Write.sql" />
+    <Build Include="Security\IMSTT2_SG_Usr_Database_Admin.sql" />
+    <Build Include="Security\IMSTT2_SVC_MOVERE.sql" />
+    <Build Include="Security\IMSTT2_Binh.Hoang.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\fnGetPreviousValuationDate.sql" />
+    <Build Include="dbo\Stored Procedures\ComplianceReport_selectAllTop20Members.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnualIR854Aggregate_selectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WholesaleAnnualInvestorCertificate_selectByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\WholesaleAnnualInvestorCertificate_userInformation.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualIR854InvestorCertificate_selectAllChildrenCsvFormat.sql" />
+    <Build Include="dbo\Stored Procedures\Member_selectAllForYearEndTaxReturn.sql" />
+    <Build Include="dbo\Stored Procedures\ReportIR854InvestorCertificate_selectAllJointChildrenData.sql" />
+    <Build Include="dbo\Stored Procedures\CalculateBNPIR853TaxCertificateData.sql" />
+    <Build Include="dbo\Stored Procedures\CalculateBNPIR853Totals.sql" />
+    <Build Include="dbo\Stored Procedures\Member_selectAllForTaxAllocation.sql" />
+    <Build Include="dbo\Stored Procedures\ISIOutputFile_TEMPCLIENTDATA.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualTaxCertificate_delete.sql" />
+    <Build Include="dbo\Stored Procedures\Reconcile_QuarterlyTaxReport_IR852.sql" />
+    <Build Include="dbo\Stored Procedures\TaxQuarterSummary_insert.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_selectAllTaxQuarter.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_selectAllEom.sql" />
+    <Build Include="dbo\Stored Procedures\TaxQuarterSummary_selectAll.sql" />
+    <Build Include="dbo\Stored Procedures\TaxQuarterSummary_select.sql" />
+    <Build Include="dbo\Stored Procedures\ISITaxComponentsTYTD_select.sql" />
+    <Build Include="dbo\Stored Procedures\ISITaxComponentsPTD_select.sql" />
+    <Build Include="dbo\Stored Procedures\FundTransactionOffsetLevy_insert.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualIR853InvestorCertificate_selectCsvFormat.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualIR854InvestorCertificate_selectAllCsvFormat.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualTaxCertificate_select.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualIR854InvestorCertificate_selectAllTaxInputData.sql" />
+    <Build Include="dbo\Stored Procedures\FundBalance_insert.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualTaxCertificate_selectAllCalculationData.sql" />
+    <Build Include="dbo\Stored Procedures\MemberFundBalance_deleteAll.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_insert.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_select.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAnnualTaxCertificate_selectAll.sql" />
+    <Build Include="dbo\Stored Procedures\IsiFileJob_logJobStart.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_selectAll.sql" />
+    <Build Include="dbo\Stored Procedures\vwMmcUnitPrice_select.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_selectLatest.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_selectNext.sql" />
+    <Build Include="dbo\Stored Procedures\IsiFileJob_logError.sql" />
+    <Build Include="dbo\Stored Procedures\MemberFundTransfer_insertFromPiebook.sql" />
+    <Build Include="dbo\Stored Procedures\IsiDataWholesale_insert.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_selectPrevious.sql" />
+    <Build Include="dbo\Stored Procedures\IsiFileJobDetails_insert.sql" />
+    <Build Include="dbo\Stored Procedures\MemberFundTransfer_deleteAll.sql" />
+    <Build Include="dbo\Stored Procedures\IsiFileJob_logJobEnd.sql" />
+    <Build Include="dbo\Stored Procedures\ValuationPeriod_update.sql" />
+    <Build Include="dbo\Stored Procedures\FundTaxableIncome_update.sql" />
+    <Build Include="dbo\Stored Procedures\IsiFileJobEmail_insert.sql" />
+    <Build Include="dbo\Stored Procedures\ISIData_insert.sql" />
+    <Build Include="Security\IMSTT2_Binh_1.Hoang.sql" />
+    <Build Include="dbo\Synonyms\customer_country.sql" />
+    <Build Include="dbo\Synonyms\gmi_vContactDetailsPersonEmail.sql" />
+    <Build Include="dbo\Synonyms\bnp_ISIDataDailyAllocation.sql" />
+    <Build Include="dbo\Synonyms\gmi_contact_details.sql" />
+    <Build Include="dbo\Synonyms\gmi_custodianmapping.sql" />
+    <Build Include="dbo\Synonyms\gmi_PieClientSpecifiedPir.sql" />
+    <Build Include="dbo\Synonyms\gmi_users.sql" />
+    <Build Include="dbo\Synonyms\gmi_usersbackup.sql" />
+    <Build Include="dbo\Synonyms\gmireports_LookthroughFundPosition.sql" />
+  </ItemGroup>
+</Project>

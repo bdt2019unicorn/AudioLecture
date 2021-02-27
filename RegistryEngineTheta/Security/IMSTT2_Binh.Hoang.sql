@@ -1,0 +1,3 @@
+﻿CREATE USER [IMSTT2\Binh.Hoang] FOR LOGIN [IMSTT2\Binh.Hoang]
+    WITH DEFAULT_SCHEMA = [IMSTT2\Binh.Hoang];
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [IMSTT2\SQL - EOM Processing] FOR LOGIN [IMSTT2\SQL - EOM Processing];
+

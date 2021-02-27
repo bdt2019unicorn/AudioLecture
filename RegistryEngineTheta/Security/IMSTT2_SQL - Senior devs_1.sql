@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [IMSTT2\SQL - Senior devs]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+
