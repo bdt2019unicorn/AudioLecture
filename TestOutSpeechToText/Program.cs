@@ -9,13 +9,11 @@ namespace TestOutSpeechToText
     {
         static void Main(string[] args)
         {
-            //https://www.youtube.com/watch?v=k07pFfrpeuQ
-            //https://www.youtube.com/watch?v=EcZF73bsme0
-            //https://www.youtube.com/watch?v=yYIQ_RkLgD8
-            RecognizeSpeech(); 
+            RecognizeSpeech();
+            Console.ReadLine(); 
         }
 
-        static async Task RecognizeSpeech()
+        static async void RecognizeSpeech()
         {
             IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("AppSettings.json").Build();
             string speech_service_key = configuration.GetSection("SpeechServiceKey").Value;
