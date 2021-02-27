@@ -1,3 +1,4 @@
 ﻿{
-  "test":  "I am testing"
+  "SpeechServiceKey": "Your Azure Speech Service key", 
+  "SpeechServiceRegion":  "Your Azure Speech Service Region"
 }
