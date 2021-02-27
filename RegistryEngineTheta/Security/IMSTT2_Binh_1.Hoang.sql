@@ -1,3 +1,0 @@
-﻿CREATE SCHEMA [IMSTT2\Binh.Hoang]
-    AUTHORIZATION [IMSTT2\Binh.Hoang];
-
