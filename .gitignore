@@ -242,3 +242,4 @@ ModelManifest.xml
 .fake/
 
 AppSettings.json*
+!AppSettings.json.example
